@@ -17,4 +17,4 @@ driver.set_window_size(1000,1000)
 #spread(test)
 
 #Iterates through all version of the killstreak weapon linked.
-getKSPrices(driver,'https://next.backpack.tf/classifieds?spell=none&texture=none&quality=11&first=0&rows=10&festivized=0&australium=1&killstreakTier=1&itemName=Ambassador')
+getKSPrices(driver,'https://next.backpack.tf/classifieds?spell=none&texture=none&quality=11&first=0&rows=10&festivized=0&killstreakTier=3&itemName=Festive%20Knife')

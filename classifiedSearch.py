@@ -27,13 +27,17 @@ def getPrices(driver,url):
 
     for i in sellElements:
         curorder = getcurrency(i)               #Parses price information from the element
+        if (curorder == 0):
+            continue
         sellPrices.append(curorder)
         temp.append(curorder.get('keys'))       #For calculating avg later
     avgsell = statistics.mean(temp)             #For calculating avg
 
 
     for i in buyElements:
-        curorder = getcurrency(i)               #Parses price information from the element
+        curorder = getcurrency(i)       #Parses price information from the element
+        if (curorder == 0):
+            continue
         if(curorder.get('keys')>avgsell):       #If current buy order is above average price, skip it.
             continue                            #Reason is to avoid pricing the expensive "one-offs"/spells orders
         buyPrices.append(curorder)

@@ -11,4 +11,5 @@ def getcurrency(listingprice):
         currency['keys'] = float(listingprice.text.replace(' key', ''))
         return currency
     else:
-        print("Other")
+        print("Currency other than keys or ref.")
+        return 0
